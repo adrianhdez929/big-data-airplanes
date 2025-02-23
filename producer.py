@@ -25,11 +25,15 @@ def fetch_airplanes_data():
     OPENSKY_PASSWORD = os.getenv('OPENSKY_PASSWORD')
 
     try:
+        if OPENSKY_USERNAME != "" and OPENSKY_PASSWORD != "":
         # Add authentication and parameters
-        response = requests.get(
-            API_URL,
-            auth=(OPENSKY_USERNAME, OPENSKY_PASSWORD),
-        )
+            response = requests.get(
+                API_URL,
+                auth=(OPENSKY_USERNAME, OPENSKY_PASSWORD),
+            )
+        else:
+            response = requests.get(API_URL)
+        
         if response.status_code == 200:
             data = response.json()
             states = []
