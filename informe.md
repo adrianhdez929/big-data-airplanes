@@ -7,6 +7,7 @@ Este proyecto implementa un sistema de monitoreo de aviones en tiempo real utili
 
 ## Modelación
 Se decide hacer uso de dos de las principales herramientas de procesamientos de grandes volúmenes de datos que son Kafka y Hadoop, las cuales proveen un manejo óptimo de dicho procesamiento e interfaces sencillas de implementar y utilizar para facilitar dichas tareas. Cada cierto tiempo, se piden los datos de los estados de los aviones conocidos y monitoreados por OpenSky para extraer métricas y hacer procesado de dichos datos. En este caso específico se muestra un mapa con la posicion en tiempo real de dichas aeronaves, clasificando por color los tipos de naves. También se muestra un conjunto de estadísticas y métricas que ayudan a visualizar y estimar el comportamiento global de la red de transporte aéreo.
+Se agregó ademas un conjunto de estadisticas sobre los retrasos de los vuelos y rankings de aeropuertos segun sus vuelos con retrasos. Dichos retrasos se clasificaron por su severidad en magnitud de tiempo y se agregaron gráficas para ver la distribución de dicha severidad entre todos los vuelos afectados.
 
 ## Arquitectura
 El sistema está compuesto por tres componentes principales:
