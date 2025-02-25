@@ -68,13 +68,13 @@ services:
       - zookeeper
 
   # MongoDB (si lo necesitas para almacenamiento adicional)
-  mongo:
-    image: mongo:latest
-    container_name: mongo
-    ports:
-      - "27017:27017"  # Puerto MongoDB
-    networks:
-      - hadoop_network
+  # mongo:
+  #   image: mongo:latest
+  #   container_name: mongo
+  #   ports:
+  #     - "27017:27017"  # Puerto MongoDB
+  #   networks:
+  #     - hadoop_network
 
 # Volúmenes de datos de Hadoop
 volumes:
